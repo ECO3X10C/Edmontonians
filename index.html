@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmontonian General Formula</title>
+    
+</head>
+
+<body>
+    <div class="landing-page">
+            <h1 class="formula">
+                <span class="formula-dark">R =</span> 
+                <span class="formula-light">.2a/E </span>
+            </h1>
+            
+        
+    </div>
+    
+
+    
+    <div class="about">
+        <h1 class="selling-point">       
+            <span class="selling-dark selling-top"> How many </span> 
+            <span class="selling-light selling-top"> Edmontonians </span> 
+            <br>
+            <span class="selling-dark selling-top"> have you associated with? </span> 
+            <br> 
+            <span class="selling-dark selling-middle"> Use the</span> 
+            <span class="selling-light selling-middle"> formula </span>
+            <span class="selling-dark selling-middle"> to find your life expectancy. </span>
+            <br>
+            <span class="selling-dark selling-bottom"> Or just use the </span> 
+            <span class="selling-light selling-bottom"> calculator </span> 
+            <span class="selling-dark selling-bottom"> below. </span>
+        </h1>
+        <h1 class ="formula-name">
+            <span class="formula-name-light name-top"> The Withdrawal of Life, in Respect to 
+                <span class = "formula-name-dark name-top">Edmontonians </span>
+                <span class = "formula-name-light nape-top">, General Formula, commonly known as the </span>
+            <br>
+            <span class = "formula-name-dark name-bottom"> Edmontonian </span>
+            <br>
+            <span class = "formula-name-light name-bottom"> General Formula. </span>
+        </h1>
+    </div>
+    <div class="calculator">
+        <h1 class="variable-definition">
+            <span class="variable-definition-light large"> R = </span>
+            <span class="variable-definition-dark small"> Number of years reamaining in your life </span>
+            <br>
+            <br>
+            <span class="variable-definition-light large"> a = </span>
+            <span class="variable-definition-dark small"> Age </span>
+            <br>
+            <br>
+            <span class="variable-definition-light large"> E =  </span>
+            <span class="variable-definition-dark small"> Number of Edmontonians you have interacted with </span>
+        </h1>
+        <h1 class="calculator-object">
+            <span class="input-dark"> a = <input class="inputs" type="text" id="num1" name="num1"/></span>
+            <br>
+            <br>
+            <span class="input-dark">E = <input class="inputs" type="text" id="num2" name="num2"/></span>
+            <br>
+            <br>
+            <span class="input-dark" id="result" name="r1">R = </span>
+            <br>
+            <br>
+            <span class = "subtmit-dark"><input class="submit" value="Calculate" type="button"  onclick="calc()" /></span>
+        </h1>
+
+        
+        
+
+    </div>
+
+    <script>
+        function calc() {
+        var textType = Node.textContent ? 'textContent' : 'innerText',
+            num1 = parseFloat(document.getElementById('num1').value) || 0,
+            num2 = parseFloat(document.getElementById('num2').value) || 0,
+            result = document.getElementById('result');
+            if (num2 == 0) {
+                result[textType] = "R = Undefined"
+            }
+            else {
+                result[textType] = " R = " + 2 * num1 / num2
+            }
+        }
+    </script>
+    <style>
+        html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+
+.landing-page {
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      rgb(217, 217, 217) 0%,
+      rgb(217, 217, 217) 50%,
+      rgb(90, 78, 78) 50%,
+      rgb(90, 78, 78) 100%
+    );
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+.formula {
+    font-family: sans-serif;
+    font-size: 10vh;
+    position: absolute;
+}
+
+.formula-light {
+    color:#D9D9D9;
+}
+
+.formula-dark {
+    color: #5A4E4E;
+}
+
+
+
+
+.about {
+    height: 100vh;
+    background: linear-gradient(
+      to left,
+      rgb(217, 217, 217) 0%,
+      rgb(217, 217, 217) 50%,
+      rgb(90, 78, 78) 50%,
+      rgb(90, 78, 78) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+.selling-point {
+    font-family: sans-serif;
+    text-align: left;
+    margin-left: 50vw;
+    position: absolute;
+}
+
+.selling-dark {
+    font-family: sans-serif;
+    color: #5A4E4E;
+}
+
+.selling-light {
+    font-family: sans-serif;
+    color: #CDCBC8;
+}
+
+.selling-top{
+    font-size: 5vh;
+}
+
+.selling-middle {
+    font-size: 3vh;
+}
+
+.selling-bottom {
+    font-size: 1.5vh;
+}
+
+.formula-name {
+    font-family: sans-serif;
+    text-align: left;
+    margin-right: 55vw;
+    position: absolute;
+}
+
+.formula-name-light {
+    font-family: sans-serif;
+    color: #D9D9D9;
+}
+
+.formula-name-dark {
+    font-family: sans-serif;
+    color: #6B5D5E;
+}
+
+.name-top {
+    font-size: 1.5vh;
+}
+
+.name-bottom {
+    font-size: 5vh;
+}
+
+
+
+.calculator {
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      rgb(217, 217, 217) 0%,
+      rgb(217, 217, 217) 50%,
+      rgb(90, 78, 78) 50%,
+      rgb(90, 78, 78) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.calculator-object {
+    font-family: sans-serif;
+    font-size: 5vh;
+    color:#6B5D5E;
+    text-align: left;
+    margin-right: 75vw;
+    position: absolute;
+}
+
+.submit-dark {
+    width: 100%;
+}
+
+.variable-definition {
+    font-family: sans-serif;
+    text-align: left;
+    margin-left: 55vw;
+    position: absolute;
+}
+
+.large {
+    font-size: 4vh;
+    color:#CDCBC8
+}
+
+.small {
+    color: #6B5D5E;
+    font-size: 4vh;
+    
+}
+
+.inputs {
+    border:none;
+    background-color: #D9D9D9;
+    padding-top: 6%;
+    font-family: sans-serif;
+    color:#6B5D5E;
+}
+
+.inputs:focus {
+    font-family: sans-serif;
+    font-size: 10px;
+    color:#6B5D5E;
+    outline-width: 0px;
+}
+
+.submit {
+    width: 100%;
+    background-color: #CDCBC8;
+    color: #686868;
+    font-family: sans-serif;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+    </style>
+</body>
+
+
+</html>
